@@ -1,5 +1,6 @@
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
+(setq ruby-insert-encoding-magic-comment nil)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -26,3 +27,9 @@
 ;;(add-hook 'sass-mode-hook 'highlight-indentation-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'sass-mode-hook   'highlight-indentation-current-column-mode)
+(add-hook 'haml-mode-hook 'highlight-indentation-current-column-mode)
+
+(require 'jsx-mode)
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
+(setq jsx-indent-level 2)
+(add-hook 'jsx-mode-hook '(lambda () (electric-indent-local-mode -1)))
