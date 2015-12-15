@@ -5,4 +5,5 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(setq default-tab-width 2)
+(setq default-tab-width 1)
+(setq-default indent-tabs-mode nil)
