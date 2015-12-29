@@ -5,7 +5,7 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(setq default-tab-width 1)
+(setq default-tab-width 2)
 (setq-default indent-tabs-mode nil)
 (show-paren-mode 1)
 (setq-default show-trailing-whitespace t)
@@ -18,8 +18,9 @@
                 haml-mode-hook
                 erb-mode-hook
                 js3-mode-hook
-                html-mode-hook
-                yaml-mode))
+                ts-mode-hook
+                sgml-mode-hook
+                yaml-mode-hook))
   (add-hook hook 'highlight-indentation-current-column-mode)
   (add-hook hook 'projectile-rails-mode))
 
@@ -28,9 +29,11 @@
                 haml-mode-hook
                 erb-mode-hook
                 js3-mode-hook
-                html-mode-hook
-                java-mode
-                scala-mode
-                text-mode))
+                ts-mode-hook
+                jsx-mode-hook
+                sgml-mode-hook
+                java-mode-hook
+                scala-mode-hook
+                text-mode-hook))
   (add-hook hook 'auto-complete-mode))
 
