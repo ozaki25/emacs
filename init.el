@@ -7,3 +7,11 @@
 
 (setq default-tab-width 1)
 (setq-default indent-tabs-mode nil)
+(show-paren-mode 1)
+(setq-default show-trailing-whitespace t)
+(column-number-mode t)
+
+(setq highlight-indentation-offset 2)
+(setq highlight-indentation-current-column-mode)
+
+(setq-default auto-complete-mode)
