@@ -20,7 +20,8 @@
                 js3-mode-hook
                 ts-mode-hook
                 sgml-mode-hook
-                yaml-mode-hook))
+                yaml-mode-hook
+                json-mode-hook))
   (add-hook hook 'highlight-indentation-current-column-mode)
   (add-hook hook 'projectile-rails-mode))
 
@@ -30,8 +31,10 @@
                 erb-mode-hook
                 js3-mode-hook
                 ts-mode-hook
-                jsx-mode-hook
                 sgml-mode-hook
+                yaml-mode-hook
+                json-mode-hook
+                jsx-mode-hook
                 java-mode-hook
                 scala-mode-hook
                 text-mode-hook))
