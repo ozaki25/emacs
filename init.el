@@ -12,6 +12,25 @@
 (column-number-mode t)
 
 (setq highlight-indentation-offset 2)
-(setq highlight-indentation-current-column-mode)
 
-(setq-default auto-complete-mode)
+(dolist (hook '(ruby-mode-hook
+                coffee-mode-hook
+                haml-mode-hook
+                erb-mode-hook
+                js3-mode-hook
+                html-mode-hook
+                yaml-mode))
+  (add-hook hook 'highlight-indentation-current-column-mode)
+  (add-hook hook 'projectile-rails-mode))
+
+(dolist (hook '(ruby-mode-hook
+                coffee-mode-hook
+                haml-mode-hook
+                erb-mode-hook
+                js3-mode-hook
+                html-mode-hook
+                java-mode
+                scala-mode
+                text-mode))
+  (add-hook hook 'auto-complete-mode))
+
