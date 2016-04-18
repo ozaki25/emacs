@@ -11,14 +11,17 @@
 (setq-default show-trailing-whitespace t)
 (column-number-mode t)
 
-(setq highlight-indentation-offset 2)
+(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 
+(setq highlight-indentation-offset 2)
 (dolist (hook '(ruby-mode-hook
                 coffee-mode-hook
                 haml-mode-hook
                 erb-mode-hook
+                scala-mode-hook
+                js-mode-hook
                 js3-mode-hook
-                ts-mode-hook
+                typescript-mode-hook
                 sgml-mode-hook
                 yaml-mode-hook
                 json-mode-hook))
@@ -29,8 +32,9 @@
                 coffee-mode-hook
                 haml-mode-hook
                 erb-mode-hook
+                js-mode-hook
                 js3-mode-hook
-                ts-mode-hook
+                typescript-mode-hook
                 sgml-mode-hook
                 yaml-mode-hook
                 json-mode-hook
@@ -39,4 +43,3 @@
                 scala-mode-hook
                 text-mode-hook))
   (add-hook hook 'auto-complete-mode))
-
