@@ -20,6 +20,8 @@
 (setq-default js2-strict-trailing-comma-warning nil)
 (setq-default js2-strict-missing-semi-warning nil)
 
+(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
+
 (dolist (hook '(ruby-mode-hook
                 coffee-mode-hook
                 haml-mode-hook
@@ -67,3 +69,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+ 
