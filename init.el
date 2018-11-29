@@ -1,15 +1,24 @@
 (prefer-coding-system 'utf-8)
 (setq ruby-insert-encoding-magic-comment nil)
+(add-to-list 'load-path "~/.emacs.d/elpa")
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
+(require 'git-complete)
 
 (setq default-tab-width 2)
 (setq-default indent-tabs-mode nil)
 (show-paren-mode 1)
 (setq-default show-trailing-whitespace t)
 (column-number-mode t)
+(setq js-indent-level 2)
+(setq highlight-indentation-offset 2)
+
+(add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
+(add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
+(setq-default js2-strict-trailing-comma-warning nil)
+(setq-default js2-strict-missing-semi-warning nil)
 
 (add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.jst$" . html-mode))
@@ -20,12 +29,10 @@
 (add-hook 'js2-mode-hook (lambda () (setq js2-strict-missing-semi-warning nil)))
 (setq-default js2-strict-trailing-comma-warning nil)
 
-(setq highlight-indentation-offset 2)
 (dolist (hook '(ruby-mode-hook
                 coffee-mode-hook
                 haml-mode-hook
                 erb-mode-hook
-                scala-mode-hook
                 js-mode-hook
                 js2-mode-hook
                 js3-mode-hook
