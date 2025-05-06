@@ -77,8 +77,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (less-css-mode yaml-mode tss tide scss-mode scheme-complete scala-mode2 sass-mode robe rjsx-mode python-mode projectile-rails markdown-preview-eww markdown-mode jsx-mode js2-refactor js-auto-beautify jekyll-modes jade-mode highlight-indentation helm groovy-mode git-commit flymd eslint-fix company coffee-mode auto-indent-mode ac-js2 ac-inf-ruby ac-html-bootstrap ac-html))))
+   '(## php-mode less-css-mode yaml-mode tss tide scss-mode scheme-complete scala-mode2 sass-mode robe rjsx-mode python-mode projectile-rails markdown-preview-eww markdown-mode jsx-mode js2-refactor js-auto-beautify jekyll-modes jade-mode highlight-indentation helm groovy-mode git-commit flymd eslint-fix company coffee-mode auto-indent-mode ac-js2 ac-inf-ruby ac-html-bootstrap ac-html)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
