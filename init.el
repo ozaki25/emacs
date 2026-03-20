@@ -11,6 +11,12 @@
 (setq-default indent-tabs-mode nil)
 (show-paren-mode 1)
 (setq-default show-trailing-whitespace t)
+(set-face-attribute 'trailing-whitespace nil :background "gray30")
+(with-eval-after-load 'markdown-mode
+  (set-face-attribute 'markdown-header-face-1 nil :foreground "#FF9900" :weight 'bold)
+  (set-face-attribute 'markdown-header-face-2 nil :foreground "#FF9900" :weight 'bold)
+  (set-face-attribute 'markdown-header-face-3 nil :foreground "#FF9900" :weight 'bold)
+  (set-face-attribute 'markdown-header-face-4 nil :foreground "#FF9900" :weight 'bold))
 (column-number-mode t)
 (setq js-indent-level 2)
 (setq highlight-indentation-offset 2)
